@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Jornada de Beregor e Guilberin | Fantasia Épica</title>
+    <meta name="description" content="Um pastor, seu cão fiel e uma guerra pelo destino das Terras Livres contra o Senhor das Sombras. Descubra esta grandiosa fantasia épica nacional.">
+    <meta name="keywords" content="A Jornada de Beregor e Guilberin, livro de fantasia épica nacional, alta fantasia brasileira, livro de fantasia medieval com magos e reinos, livro para quem gosta de Tolkien, Contra o Senhor das Sombras livro, fantasia épica juvenil, Nilson Mascolo autor">
+    <meta name="author" content="Nilson Mascolo">
+    <link rel="canonical" href="https://jornadaberegor.com/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="A Jornada de Beregor e Guilberin | Fantasia Épica">
+    <meta property="og:description" content="Um pastor, seu cão fiel e uma guerra pelo destino das Terras Livres contra o Senhor das Sombras. Descubra esta grandiosa fantasia épica nacional.">
+    <meta property="og:image" content="./IMG/capa_livro.jpg">
+    <meta property="og:url" content="https://jornadaberegor.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="A Jornada de Beregor e Guilberin | Fantasia Épica">
+    <meta name="twitter:description" content="Um pastor, seu cão fiel e uma guerra pelo destino das Terras Livres contra o Senhor das Sombras. Descubra esta grandiosa fantasia épica nacional.">
+    <meta name="twitter:image" content="./IMG/capa_livro.jpg">
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dourado: '#C9A227',
+                        azul_noturno: '#16233F',
+                        carvao: '#050505',
+                        marfim: '#F3EFE3',
+                        floresta: '#1F3D2B',
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "linear-gradient(to bottom, rgba(5, 5, 5, 0.4), rgba(5, 5, 5, 1)), url('assets/img/hero-bg.webp')",
+                        'section-pattern': "linear-gradient(to bottom, rgba(22, 35, 63, 0.8), rgba(5, 5, 5, 1)), url('assets/img/bg-pattern.webp')"
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #050505; color: #F3EFE3; }
+        .glass-header {
+            background: rgba(5, 5, 5, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(243, 239, 227, 0.05);
+        }
+        .glass-card {
+            background: rgba(22, 35, 63, 0.3);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(201, 162, 39, 0.15);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(201, 162, 39, 0.5);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(201, 162, 39, 0.2);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #16233F; border-radius: 4px; border: 1px solid #C9A227; }
+        ::-webkit-scrollbar-thumb:hover { background: #C9A227; }
+        
+        .btn-primary {
+            background-color: #C9A227;
+            color: #050505;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(201, 162, 39, 0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 162, 39, 0.5);
+            background-color: #dfb532;
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: #C9A227;
+            border: 1px solid #C9A227;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: rgba(201, 162, 39, 0.1);
+            transform: translateY(-2px);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #F3EFE3, #C9A227);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        [x-cloak] { display: none !important; }
+    </style>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://jornadaberegor.com/#author",
+          "name": "Nilson Mascolo",
+          "description": "Músico, escritor e artesão ítalo-brasileiro, autor de A Jornada de Beregor e Guilberin.",
+          "image": "https://jornadaberegor.com/IMG/autor.jpg"
+        },
+        {
+          "@type": "Book",
+          "@id": "https://jornadaberegor.com/#book",
+          "name": "A Jornada de Beregor e Guilberin",
+          "author": {
+            "@id": "https://jornadaberegor.com/#author"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Atlasnov"
+          },
+          "image": "https://jornadaberegor.com/IMG/capa_livro.jpg",
+          "url": "https://jornadaberegor.com/",
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://jornadaberegor.com/#website",
+          "url": "https://jornadaberegor.com/",
+          "name": "A Jornada de Beregor e Guilberin - Livro de Fantasia Épica"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://jornadaberegor.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "1. Qual é a faixa etária recomendada para a leitura?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O livro é uma fantasia épica juvenil e adulta, recomendado a partir dos 12 ou 13 anos. É ideal para leitores que buscam batalhas épicas, mistérios antigos e lições profundas de heroísmo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "2. O livro está disponível em quais formatos (físico e digital)?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Você pode adquirir A Jornada de Beregor e Guilberin no formato digital (eBook Kindle), ou ter as belíssimas versões físicas impressas em Capa Comum ou Capa Dura."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "3. Onde posso comprar o livro?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O livro é vendido oficialmente através da Amazon e do Mercado Livre, garantindo segurança na sua compra e um frete ágil para qualquer lugar do país."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "4. O livro é volume único ou o início de uma série?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A obra entrega uma experiência completa e épica. Para descobrir se este é o fim ou o início de algo ainda maior nas Terras Livres, recomendamos iniciar a sua leitura!"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "5. Como posso ler uma amostra grátis do livro antes de comprar?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nós liberamos o início da história para você degustar. Basta clicar no botão \"Ler Primeiro Capítulo Grátis\" localizado no topo desta página e abrir o arquivo PDF."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "6. Existe versão em audiobook da obra?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Até o presente momento, o livro está disponível exclusivamente nos formatos de texto (físico impresso e eBook digital)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "7. A história tem foco em batalhas ou é mais reflexiva?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O enredo traz o equilíbrio perfeito da alta fantasia. Você viverá o impacto das guerras, combates entre magos e manobras militares grandiosas, ao mesmo tempo em que acompanha a reflexão emocional e a evolução do pastor Beregor e de seu cão Guilberin."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="font-inter antialiased overflow-x-hidden selection:bg-dourado selection:text-carvao">
+
+    <!-- Header -->
+    <header x-data="{ mobileMenuOpen: false, scrolled: false }" 
+            @scroll.window="scrolled = (window.pageYOffset > 20)"
+            :class="scrolled ? 'glass-header py-4' : 'bg-transparent py-6'"
+            class="fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center">
+            <a href="#hero" class="text-xl md:text-2xl font-serif text-[#F3EFE3] tracking-widest uppercase hover:text-[#C9A227] transition-colors duration-300 cursor-pointer">BEREGOR &amp; GUILBERIN</a>
+            
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-marfim/80">
+                <a href="#sinopse" class="hover:text-dourado transition-colors uppercase tracking-widest text-xs">A História</a>
+                <a href="#universo" class="hover:text-dourado transition-colors uppercase tracking-widest text-xs">O Universo</a>
+                <a href="#onde-comprar" class="hover:text-dourado transition-colors uppercase tracking-widest text-xs">Onde Comprar</a>
+                <a href="#autor" class="hover:text-dourado transition-colors uppercase tracking-widest text-xs">Sobre o Autor</a>
+                <a href="#faq" class="hover:text-dourado transition-colors uppercase tracking-widest text-xs">FAQ</a>
+            </nav>
+
+            <!-- Mobile Hamburger Button -->
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-marfim focus:outline-none" aria-label="Menu">
+                <svg x-show="!mobileMenuOpen" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg x-show="mobileMenuOpen" x-cloak class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" x-collapse x-cloak class="md:hidden glass-header absolute top-full left-0 w-full border-t border-white/10">
+            <nav class="flex flex-col px-6 py-4 gap-4 font-medium text-marfim/80 text-center">
+                <a @click="mobileMenuOpen = false" href="#sinopse" class="hover:text-dourado py-2 uppercase tracking-widest text-sm">A História</a>
+                <a @click="mobileMenuOpen = false" href="#universo" class="hover:text-dourado py-2 uppercase tracking-widest text-sm">O Universo</a>
+                <a @click="mobileMenuOpen = false" href="#onde-comprar" class="hover:text-dourado py-2 uppercase tracking-widest text-sm">Onde Comprar</a>
+                <a @click="mobileMenuOpen = false" href="#autor" class="hover:text-dourado py-2 uppercase tracking-widest text-sm">Sobre o Autor</a>
+                <a @click="mobileMenuOpen = false" href="#faq" class="hover:text-dourado py-2 uppercase tracking-widest text-sm">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 bg-carvao bg-hero-pattern bg-cover bg-center bg-no-repeat bg-fixed">
+            <div class="container mx-auto px-6 lg:px-12 relative z-10 text-center max-w-5xl">
+                <span class="block font-cinzel text-dourado text-sm md:text-base font-bold tracking-[0.3em] uppercase mb-4">A Jornada de Beregor e Guilberin: Livro de Fantasia Épica</span>
+                <h1 class="font-cinzel text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-marfim drop-shadow-2xl leading-tight">
+                    Um pastor. <br/><span class="text-gradient">Seu cão fiel.</span><br/>Uma guerra iminente.
+                </h1>
+                <p class="text-lg md:text-xl text-marfim/90 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+                    Pelo destino das Terras Livres. Adentre um mundo de alta fantasia onde a coragem dos seres mais humildes é a nossa única esperança contra o avanço implacável das trevas.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <a href="#onde-comprar" class="btn-primary px-8 py-4 rounded font-bold uppercase tracking-widest text-sm w-full sm:w-auto text-center">Garantir Meu Exemplar</a>
+                    <a href="https://drive.google.com/file/d/1ikNLx4TzFFoCfANTaqGZmnnURPD-dwlr/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-secondary px-8 py-4 rounded font-bold uppercase tracking-widest text-sm w-full sm:w-auto text-center">Ler Primeiro Capítulo Grátis</a>
+                </div>
+                <p class="mt-8 text-sm text-marfim/60 font-light tracking-wide">Disponível em eBook Kindle, Capa Comum e Capa Dura.</p>
+            </div>
+            <!-- Decorative bottom fade -->
+            <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-carvao to-transparent"></div>
+        </section>
+
+        <!-- 2. A História / Sinopse -->
+        <section id="sinopse" class="py-24 bg-carvao relative">
+            <div class="container mx-auto px-6 lg:px-12 max-w-6xl">
+                <div class="text-center mb-16">
+                    <h2 class="font-cinzel text-3xl md:text-5xl font-bold text-marfim mb-4">A Guerra pelo Destino das Terras Livres</h2>
+                    <p class="text-dourado font-cinzel tracking-widest uppercase text-sm md:text-base">Contra o Senhor das Sombras</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-dourado/20 rounded-lg transform translate-x-4 translate-y-4"></div>
+                        <img src="./IMG/capa_livro.jpg" alt="Capa do Livro A Jornada de Beregor e Guilberin" class="w-full max-w-md mx-auto rounded-lg shadow-lg">
+                    </div>
+                    <div class="space-y-6 text-marfim/80 text-lg leading-relaxed font-light">
+                        <h3 class="font-cinzel text-2xl text-marfim font-semibold mb-4 border-b border-dourado/30 pb-2 inline-block">O Senhor das Sombras e o Exército de Gorrmash</h3>
+                        <p>Das profundezas do Abismo, Hor, o Senhor das Sombras, desperta com uma ambição letal: conquistar Valandor e subjugar todas as Terras Livres. Para isso, ele ergue um exército monstruoso formado por Gorrmash e homens de corações corrompidos, prontos para marchar sobre a paz dos reinos do mundo.</p>
+                        <p>Nas verdes e pacatas colinas de Saváris, onde a guerra parecia ser apenas uma lenda distante, vive Beregor. Ao lado de seu fiel companheiro, o cão Guilberin, este jovem pastor de coração puro se vê subitamente arrancado de sua vida simples.</p>
+                        <p>Arrastados para uma jornada brutal e majestosa, eles se unem aos grandes povos aliados em um confronto decisivo. Se falharem, Valandor cairá, e toda a luz e a beleza do mundo serão reduzidas à servidão ou apagadas para sempre.</p>
+                        
+                        <div class="pt-6">
+                            <a href="#onde-comprar" class="inline-block border-b-2 border-dourado text-dourado font-bold uppercase tracking-widest text-sm pb-1 hover:text-marfim hover:border-marfim transition-colors">Embarcar na Jornada &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. O Universo -->
+        <section id="universo" class="py-24 bg-azul_noturno relative overflow-hidden bg-section-pattern bg-cover bg-center">
+            <div class="container mx-auto px-6 lg:px-12 max-w-6xl relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="font-cinzel text-3xl md:text-5xl font-bold text-marfim mb-4">Explore o Universo de Valandor e Saváris</h2>
+                    <p class="text-marfim/70 max-w-2xl mx-auto text-lg font-light">Uma das maiores obras da alta fantasia brasileira, onde cada detalhe foi construído para criar uma experiência arrebatadora.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto gap-8">
+                    <!-- Heróis -->
+                    <div class="glass-card p-8 rounded-xl text-center group">
+                        <div class="w-16 h-16 mx-auto bg-dourado/10 rounded-full flex items-center justify-center mb-6 border border-dourado/30 group-hover:bg-dourado/30 transition-colors">
+                            <svg class="w-8 h-8 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        </div>
+                        <h3 class="font-cinzel text-xl text-marfim font-bold mb-4">Os Heróis: Beregor e Guilberin</h3>
+                        <p class="text-marfim/70 font-light text-sm leading-relaxed">O Pastor de Luz e seu incansável cão fiel provam que a verdadeira nobreza não precisa vir do sangue dos reis. No epicentro do medo, a lealdade inabalável de Guilberin e a coragem inesperada de Beregor são a chama que guiará os defensores da liberdade.</p>
+                    </div>
+
+                    <!-- Mapa -->
+                    <div class="glass-card p-8 rounded-xl text-center group">
+                        <div class="w-16 h-16 mx-auto bg-dourado/10 rounded-full flex items-center justify-center mb-6 border border-dourado/30 group-hover:bg-dourado/30 transition-colors">
+                            <svg class="w-8 h-8 text-dourado" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+                        </div>
+                        <h3 class="font-cinzel text-xl text-marfim font-bold mb-4">Mapa das Terras Livres</h3>
+                        <p class="text-marfim/70 font-light text-sm leading-relaxed mb-6">Da serenidade luminosa de Saváris até as vastidões consumidas pela sombra, o mundo de Valandor é vasto e repleto de perigos. Estude a geografia das Terras Livres e acompanhe o trajeto épico dos nossos heróis pelas florestas, montanhas e reinos ancestrais.</p>
+                        <a href="mapa.html" class="inline-block mt-6 px-8 py-3 bg-[#C9A227] text-[#050505] font-bold uppercase tracking-widest text-xs rounded hover:bg-[#dfb532] hover:-translate-y-1 transition-all duration-300 shadow-[0_4px_15px_rgba(201,162,39,0.3)] hover:shadow-[0_6px_20px_rgba(201,162,39,0.5)]">Explorar Mapa em Alta Resolução</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Onde Comprar -->
+        <section id="onde-comprar" class="py-24 bg-carvao relative">
+            <div class="container mx-auto px-6 lg:px-12 max-w-5xl">
+                <div class="text-center mb-16">
+                    <h2 class="font-cinzel text-3xl md:text-5xl font-bold text-marfim mb-4">Onde Comprar o Livro Físico e eBook</h2>
+                    <p class="text-marfim/70 font-light text-lg">Sua aventura está a apenas um clique de distância. Escolha como deseja mergulhar na leitura e garanta o seu exemplar hoje mesmo.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Kindle -->
+                    <div class="glass-card p-10 rounded-xl text-center flex flex-col justify-between items-center relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-dourado text-carvao text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-bl-lg">Digital</div>
+                        <div>
+                            <h3 class="font-cinzel text-2xl text-marfim font-bold mb-4 mt-4">eBook Kindle</h3>
+                            <p class="text-marfim/70 font-light text-sm mb-8">Carregue a magia de Valandor com você no celular, tablet ou Kindle. Acesso imediato à história logo após a confirmação.</p>
+                        </div>
+                        <a href="https://a.co/d/8ExlBtl" target="_blank" class="btn-primary w-full py-3 rounded font-bold uppercase tracking-widest text-xs block text-center mt-auto">Comprar na Amazon</a>
+                    </div>
+
+                    <!-- Fisico Amazon -->
+                    <div class="glass-card p-10 rounded-xl text-center flex flex-col justify-between items-center border border-dourado/50 bg-dourado/5">
+                        <div class="absolute top-0 right-0 bg-dourado/80 text-carvao text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-bl-lg">Físico</div>
+                        <div>
+                            <h3 class="font-cinzel text-2xl text-marfim font-bold mb-4 mt-4">Versão Impressa</h3>
+                            <p class="text-marfim/70 font-light text-sm mb-8">Edições físicas lindamente diagramadas para colecionadores e apaixonados pelo toque do papel.</p>
+                        </div>
+                        <div class="w-full flex flex-col gap-3 mt-auto">
+                            <a href="https://a.co/d/4q7i7DC" target="_blank" class="btn-primary w-full py-3 rounded font-bold uppercase tracking-widest text-xs block text-center">Amazon - Capa Dura</a>
+                            <a href="https://a.co/d/j91shvs" target="_blank" class="btn-secondary w-full py-3 rounded font-bold uppercase tracking-widest text-xs block text-center">Amazon - Capa Comum</a>
+                        </div>
+                    </div>
+
+                    <!-- Fisico ML -->
+                    <div class="glass-card p-10 rounded-xl text-center flex flex-col justify-between items-center">
+                        <div class="absolute top-0 right-0 bg-dourado/80 text-carvao text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-bl-lg">Físico</div>
+                        <div>
+                            <h3 class="font-cinzel text-2xl text-marfim font-bold mb-4 mt-4">Mercado Livre</h3>
+                            <p class="text-marfim/70 font-light text-sm mb-8">Prefere comprar pelo Mercado Livre? Aproveite o envio ultra-rápido para todo o Brasil. Receba em casa.</p>
+                        </div>
+                        <div class="w-full flex flex-col gap-3 mt-auto">
+                            <a href="https://produto.mercadolivre.com.br/MLB-4382295841-livro-a-jornada-de-beregor-e-guilberin-contra-o-senhor-das-sombras-_JM" target="_blank" class="btn-primary w-full py-3 rounded font-bold uppercase tracking-widest text-xs block text-center">ML - Capa Dura</a>
+                            <a href="https://produto.mercadolivre.com.br/MLB-4382020437-livro-a-jornada-de-beregor-e-guilberin-contra-o-senhor-das-sombras-_JM" target="_blank" class="btn-secondary w-full py-3 rounded font-bold uppercase tracking-widest text-xs block text-center">ML - Capa Comum</a>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-center text-marfim/50 mt-12 text-sm italic font-light">Compra 100% segura e envio rápido garantido pelas maiores plataformas do Brasil.</p>
+            </div>
+        </section>
+
+        <!-- 5. Sobre o Autor -->
+        <section id="autor" class="py-24 bg-azul_noturno border-t border-b border-white/5">
+            <div class="container mx-auto px-6 lg:px-12 max-w-6xl">
+                <div class="flex flex-col md:flex-row gap-16 items-center">
+                    <div class="w-full md:w-2/5">
+                        <div class="relative w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full overflow-hidden border-4 border-dourado/30 shadow-2xl">
+                            <img src="./IMG/autor.jpg" alt="Nilson Mascolo - Autor" class="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-[#C9A227]/50 shadow-[0_0_30px_rgba(201,162,39,0.15)] object-cover mx-auto">
+                        </div>
+                    </div>
+                    <div class="w-full md:w-3/5 space-y-6">
+                        <h2 class="font-cinzel text-3xl md:text-5xl font-bold text-marfim mb-2">Conheça o Autor</h2>
+                        <h3 class="text-xl text-dourado font-cinzel tracking-widest uppercase mb-6">Nilson Mascolo</h3>
+                        
+                        <div class="text-marfim/80 space-y-4 font-light text-lg leading-relaxed">
+                            <p>Músico, escritor e artesão ítalo-brasileiro, Nilson Mascolo Filho une sua profunda sensibilidade artística a um amor incondicional pela literatura fantástica. Como autor de diversas obras, ele busca resgatar a nobreza e a magia clássica em cada narrativa.</p>
+                            <p>Fortemente inspirado pelas obras de Tolkien e C. S. Lewis, ele escreveu A Jornada de Beregor e Guilberin como um verdadeiro legado literário. Mais do que contar uma história de guerra e magos, Nilson busca lembrar o leitor do poder indestrutível da amizade, da coragem e da esperança humana nos momentos de maior escuridão.</p>
+                        </div>
+                        
+                        <div class="pt-6">
+                            <a href="https://www.instagram.com/ajornadadeberegoreguilberin/" target="_blank" class="inline-flex items-center gap-2 btn-secondary px-6 py-3 rounded font-bold uppercase tracking-widest text-xs">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                                Acompanhe no Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. FAQ Literário -->
+        <section id="faq" class="py-24 bg-carvao">
+            <div class="container mx-auto px-6 lg:px-12 max-w-4xl">
+                <div class="text-center mb-16">
+                    <h2 class="font-cinzel text-3xl md:text-5xl font-bold text-marfim mb-4">Perguntas Frequentes (FAQ)</h2>
+                    <p class="text-marfim/70 font-light text-lg">Tudo o que você precisa saber sobre a obra.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Item 1 -->
+                    <div x-data="{ open: false }" class="glass-card rounded-lg overflow-hidden">
+                        <button @click="open = !open" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-cinzel font-bold text-marfim text-lg">1. Qual é a faixa etária recomendada para a leitura?</span>
+                            <span class="text-dourado" x-show="!open">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </span>
+                            <span class="text-dourado" x-show="open" x-cloak>
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                            </span>
+                        </button>
+                        <div x-show="open" x-collapse x-cloak class="px-6 pb-5 text-marfim/70 font-light leading-relaxed border-t border-white/5 pt-4">
+                            O livro é uma fantasia épica juvenil e adulta, recomendado a partir dos 12 ou 13 anos. É ideal para leitores que buscam batalhas épicas, mistérios antigos e lições profundas de heroísmo.
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div x-data="{ open: false }" class="glass-card rounded-lg overflow-hidden">
+                        <button @click="open = !open" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-cinzel font-bold text-marfim text-lg">2. O livro está disponível em quais formatos (físico e digital)?</span>
+                            <span class="text-dourado" x-show="!open">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </span>
+                            <span class="text-dourado" x-show="open" x-cloak>
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                            </span>
+                        </button>
+                        <div x-show="open" x-collapse x-cloak class="px-6 pb-5 text-marfim/70 font-light leading-relaxed border-t border-white/5 pt-4">
+                            Você pode adquirir A Jornada de Beregor e Guilberin no formato digital (eBook Kindle), ou ter as belíssimas versões físicas impressas em Capa Comum ou Capa Dura.
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div x-data="{ open: false }" class="glass-card rounded-lg overflow-hidden">
+                        <button @click="open = !open" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-cinzel font-bold text-marfim text-lg">3. Onde posso comprar o livro?</span>
+                            <span class="text-dourado" x-show="!open">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </span>
+                            <span class="text-dourado" x-show="open" x-cloak>
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                            </span>
+                        </button>
+                        <div x-show="open" x-collapse x-cloak class="px-6 pb-5 text-marfim/70 font-light leading-relaxed border-t border-white/5 pt-4">
+                            O livro é vendido oficialmente através da Amazon e do Mercado Livre, garantindo segurança na sua compra e um frete ágil para qualquer lugar do país.
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div x-data="{ open: false }" class="glass-card rounded-lg overflow-hidden">
+                        <button @click="open = !open" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-cinzel font-bold text-marfim text-lg">4. O livro é volume único ou o início de uma série?</span>
+                            <span class="text-dourado" x-show="!open">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </span>
+                            <span class="text-dourado" x-show="open" x-cloak>
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                            </span>
+                        </button>
+                        <div x-show="open" x-collapse x-cloak class="px-6 pb-5 text-marfim/70 font-light leading-relaxed border-t border-white/5 pt-4">
+                            A obra entrega uma experiência completa e épica. Para descobrir se este é o fim ou o início de algo ainda maior nas Terras Livres, recomendamos iniciar a sua leitura!
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div x-data="{ open: false }" class="glass-card rounded-lg overflow-hidden">
+                        <button @click="open = !open" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-cinzel font-bold text-marfim text-lg">5. Como posso ler uma amostra grátis do livro antes de comprar?</span>
+                            <span class="text-dourado" x-show="!open">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </span>
+                            <span class="text-dourado" x-show="open" x-cloak>
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                            </span>
+                        </button>
+                        <div x-show="open" x-collapse x-cloak class="px-6 pb-5 text-marfim/70 font-light leading-relaxed border-t border-white/5 pt-4">
+                            Nós liberamos o início da história para você degustar. Basta clicar no botão "Ler Primeiro Capítulo Grátis" localizado no topo desta página e abrir o arquivo PDF.
+                        </div>
+                    </div>
+                    
+                    <!-- Item 6 -->
+                    <div x-data="{ open: false }" class="glass-card rounded-lg overflow-hidden">
+                        <button @click="open = !open" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-cinzel font-bold text-marfim text-lg">6. Existe versão em audiobook da obra?</span>
+                            <span class="text-dourado" x-show="!open">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </span>
+                            <span class="text-dourado" x-show="open" x-cloak>
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                            </span>
+                        </button>
+                        <div x-show="open" x-collapse x-cloak class="px-6 pb-5 text-marfim/70 font-light leading-relaxed border-t border-white/5 pt-4">
+                            Até o presente momento, o livro está disponível exclusivamente nos formatos de texto (físico impresso e eBook digital).
+                        </div>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div x-data="{ open: false }" class="glass-card rounded-lg overflow-hidden">
+                        <button @click="open = !open" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                            <span class="font-cinzel font-bold text-marfim text-lg">7. A história tem foco em batalhas ou é mais reflexiva?</span>
+                            <span class="text-dourado" x-show="!open">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </span>
+                            <span class="text-dourado" x-show="open" x-cloak>
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                            </span>
+                        </button>
+                        <div x-show="open" x-collapse x-cloak class="px-6 pb-5 text-marfim/70 font-light leading-relaxed border-t border-white/5 pt-4">
+                            O enredo traz o equilíbrio perfeito da alta fantasia. Você viverá o impacto das guerras, combates entre magos e manobras militares grandiosas, ao mesmo tempo em que acompanha a reflexão emocional e a evolução do pastor Beregor e de seu cão Guilberin.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 7. Footer -->
+    <footer class="bg-[#020202] pt-16 pb-8 border-t border-white/10 relative">
+        <div class="container mx-auto px-6 lg:px-12 max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Logo & About -->
+                <div class="col-span-1 md:col-span-2">
+                    <a href="#hero" class="flex items-center gap-3 mb-6">
+                        <span class="font-cinzel font-bold text-xl text-marfim tracking-wider">Beregor & Guilberin</span>
+                    </a>
+                    <p class="text-marfim/60 font-light text-sm mb-6 max-w-sm leading-relaxed">
+                        Adentre um mundo de alta fantasia onde a coragem dos seres mais humildes é a nossa única esperança contra o avanço implacável das trevas.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/ajornadadeberegoreguilberin/" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-marfim/70 hover:bg-dourado hover:text-carvao transition-all">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div>
+                    <h4 class="font-cinzel font-bold text-dourado mb-6 uppercase tracking-widest text-sm">Navegação</h4>
+                    <ul class="space-y-3 font-light text-sm text-marfim/70">
+                        <li><a href="#sinopse" class="hover:text-dourado transition-colors">A História</a></li>
+                        <li><a href="#universo" class="hover:text-dourado transition-colors">O Universo</a></li>
+                        <li><a href="#autor" class="hover:text-dourado transition-colors">Sobre o Autor</a></li>
+                        <li><a href="#onde-comprar" class="hover:text-dourado transition-colors">Onde Comprar</a></li>
+                        <li><a href="#faq" class="hover:text-dourado transition-colors">Dúvidas Frequentes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact / Local -->
+                <div>
+                    <h4 class="font-cinzel font-bold text-dourado mb-6 uppercase tracking-widest text-sm">Contato</h4>
+                    <ul class="space-y-4 font-light text-sm text-marfim/70">
+                        <li class="flex items-center gap-3">
+                            <a href="mailto:nilsonmascolo@gmail.com" class="hover:text-dourado transition-colors">nilsonmascolo@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-marfim/50 font-light">
+                <p>&copy; 2026 Nilson Mascolo. Todos os direitos reservados. A Jornada de Beregor e Guilberin.</p>
+                <p>Desenvolvido por Atlasnov.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
