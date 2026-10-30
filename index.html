@@ -32,7 +32,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -54,10 +54,11 @@
                     },
                     fontFamily: {
                         cinzel: ['Cinzel', 'serif'],
+                        titulo: ['"Cormorant Garamond"', 'serif'],
                         inter: ['Inter', 'sans-serif'],
                     },
                     backgroundImage: {
-                        'hero-pattern': "linear-gradient(to bottom, rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.75) 60%, rgba(5, 5, 5, 1)), url('IMG/hero-bg.jpg')",
+                        'hero-pattern': "linear-gradient(to bottom, rgba(5, 5, 5, 0.5), rgba(5, 5, 5, 0.6) 60%, rgba(5, 5, 5, 1)), url('IMG/hero-bg.jpg')",
                         'section-pattern': "linear-gradient(to bottom, rgba(22, 35, 63, 0.8), rgba(5, 5, 5, 1)), url('IMG/bg-pattern.jpg')"
                     }
                 }
@@ -112,6 +113,8 @@
             background-color: rgba(201, 162, 39, 0.1);
             transform: translateY(-2px);
         }
+        .hero-sombra { text-shadow: 0 2px 4px rgba(0,0,0,.8), 0 4px 30px rgba(0,0,0,.6); }
+        .hero-sombra-leve { filter: drop-shadow(0 2px 3px rgba(0,0,0,.85)); }
         .text-gradient {
             background: linear-gradient(to right, #F3EFE3, #C9A227);
             -webkit-background-clip: text;
@@ -262,10 +265,11 @@
         <!-- 1. Hero Section -->
         <section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 bg-carvao bg-hero-pattern bg-cover bg-center bg-no-repeat bg-fixed">
             <div class="container mx-auto px-6 lg:px-12 relative z-10 text-center max-w-5xl">
-                <span class="block font-cinzel text-dourado text-sm md:text-base font-bold tracking-[0.3em] uppercase mb-4">A Jornada de Beregor e Guilberin: Livro de Fantasia Épica</span>
-                <h1 class="font-cinzel text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-marfim drop-shadow-2xl leading-tight">
-                    Um pastor. <br/><span class="text-gradient">Seu cão fiel.</span><br/>Uma guerra iminente.
+                <span class="block font-cinzel text-dourado text-[11px] md:text-sm font-bold tracking-[0.15em] md:tracking-[0.3em] uppercase mb-6 hero-sombra">Um pastor &middot; Seu cão fiel &middot; Uma guerra iminente</span>
+                <h1 class="font-titulo font-bold text-marfim text-5xl md:text-7xl lg:text-8xl leading-[1.05] mb-4 hero-sombra">
+                    A Jornada de Beregor e Guilberin
                 </h1>
+                <p class="font-titulo font-semibold text-gradient text-2xl md:text-4xl lg:text-5xl mb-8 hero-sombra-leve">Contra o Senhor das Sombras</p>
                 <p class="text-lg md:text-xl text-marfim/90 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
                     Pelo destino das Terras Livres. Adentre um mundo de alta fantasia onde a coragem dos seres mais humildes é a nossa única esperança contra o avanço implacável das trevas.
                 </p>
