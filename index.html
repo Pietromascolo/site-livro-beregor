@@ -122,6 +122,8 @@
             background-clip: text;
         }
         [x-cloak] { display: none !important; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item[open] { border-color: rgba(201, 162, 39, 0.35); }
     </style>
 
     <!-- JSON-LD Structured Data -->
@@ -163,58 +165,74 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "1. Qual é a faixa etária recomendada para a leitura?",
+              "name": "Para que idade é o livro?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "O livro é uma fantasia épica juvenil e adulta, recomendado a partir dos 12 ou 13 anos. É ideal para leitores que buscam batalhas épicas, mistérios antigos e lições profundas de heroísmo."
+                "text": "A partir de 12 anos, e também para adultos que gostam de fantasia épica. Há batalhas e mortes, no tom de O Hobbit e O Senhor dos Anéis, mas as lutas não se demoram em detalhes sangrentos. Não há palavrões nem cenas de sexo, e o romance é delicado."
               }
             },
             {
               "@type": "Question",
-              "name": "2. O livro está disponível em quais formatos (físico e digital)?",
+              "name": "A história é mais de batalhas ou de aventura?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Você pode adquirir A Jornada de Beregor e Guilberin no formato digital (eBook Kindle) ou na versão impressa: pelo Clube dos Autores (formato A5, papel Pólen, envio nacional) ou pela Amazon (formato 6 × 9 polegadas, envio internacional)."
+                "text": "Das duas coisas. A maior parte do livro é viagem e descoberta: florestas, reinos, povos e criaturas, amizades que se formam pelo caminho e momentos de humor. As batalhas crescem ao longo da jornada até o confronto final. A magia é discreta, como em O Hobbit: há magos, como Galdren e Rigar, mas a força da história está nos personagens."
               }
             },
             {
               "@type": "Question",
-              "name": "3. Onde posso comprar o livro?",
+              "name": "É volume único ou o começo de uma série?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "O livro é vendido oficialmente pelo Clube dos Autores (versão impressa com envio para todo o Brasil) e pela Amazon (eBook Kindle e versão impressa com envio internacional), garantindo segurança na sua compra."
+                "text": "A história deste livro tem começo, meio e fim, sem deixar você preso a um final em aberto. Mas as Terras Livres guardam muito mais, e a continuação já está sendo escrita."
               }
             },
             {
               "@type": "Question",
-              "name": "4. O livro é volume único ou o início de uma série?",
+              "name": "O cão Guilberin morre?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "A obra entrega uma experiência completa e épica. Para descobrir se este é o fim ou o início de algo ainda maior nas Terras Livres, recomendamos iniciar a sua leitura!"
+                "text": "Sem contar a história: Guilberin está ao lado de Beregor até a última página."
               }
             },
             {
               "@type": "Question",
-              "name": "5. Como posso ler uma amostra grátis do livro antes de comprar?",
+              "name": "O livro tem mapa?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Nós liberamos o início da história para você degustar. Basta clicar no botão \"Ler Primeiro Capítulo Grátis\" localizado no topo desta página e abrir o arquivo PDF."
+                "text": "Tem. O Mapa das Terras Livres vem no livro, e você também pode vê-lo aqui no site. Nos apêndices, há ainda as Breves histórias das origens de Hor: como tudo começou, muito antes da jornada de Beregor."
               }
             },
             {
               "@type": "Question",
-              "name": "6. Existe versão em audiobook da obra?",
+              "name": "Qual edição devo comprar?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Até o presente momento, o livro está disponível exclusivamente nos formatos de texto (físico impresso e eBook digital)."
+                "text": "No Brasil, a indicada é a edição impressa do Clube de Autores, feita aqui, em papel pólen. Para ler no celular, o eBook Kindle é a opção mais barata e chega na hora. A edição impressa da Amazon vem do exterior e é indicada para quem mora fora do Brasil. Ver as edições e os preços."
               }
             },
             {
               "@type": "Question",
-              "name": "7. A história tem foco em batalhas ou é mais reflexiva?",
+              "name": "Posso ler um trecho antes de comprar?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "O enredo traz o equilíbrio perfeito da alta fantasia. Você viverá o impacto das guerras, combates entre magos e manobras militares grandiosas, ao mesmo tempo em que acompanha a reflexão emocional e a evolução do pastor Beregor e de seu cão Guilberin."
+                "text": "Pode. O primeiro capítulo inteiro é gratuito: ler o 1º capítulo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Existe versão em inglês?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim. The Journey of Beregor and Guilberin está à venda na Amazon americana, em eBook, capa comum e capa dura: ver na Amazon."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Tem audiolivro?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ainda não. Por enquanto, o livro existe impresso e em eBook."
               }
             }
           ]
@@ -277,7 +295,7 @@
                     <a href="#onde-comprar" class="btn-primary px-8 py-4 rounded font-bold uppercase tracking-widest text-sm w-full sm:w-auto text-center">Garantir Meu Exemplar</a>
                     <a href="https://drive.google.com/file/d/1hXDsUf5eEYmQ8k8UcZ0idfASDMFobf9t/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-secondary px-8 py-4 rounded font-bold uppercase tracking-widest text-sm w-full sm:w-auto text-center">Ler Primeiro Capítulo Grátis</a>
                 </div>
-                <p class="mt-8 text-sm text-marfim/60 font-light tracking-wide">Disponível em eBook Kindle e livro impresso (Clube dos Autores e Amazon).</p>
+                <p class="mt-8 text-sm text-marfim/60 font-light tracking-wide">Disponível em eBook Kindle e livro impresso (Clube de Autores e Amazon).</p>
             </div>
             <!-- Decorative bottom fade -->
             <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-carvao to-transparent"></div>
@@ -361,15 +379,15 @@
                         <a href="https://a.co/d/00mi6Vce" target="_blank" class="btn-primary w-full py-3 rounded font-bold uppercase tracking-widest text-xs block text-center mt-auto">Comprar na Amazon</a>
                     </div>
 
-                    <!-- Fisico Clube dos Autores -->
+                    <!-- Fisico Clube de Autores -->
                     <div class="glass-card p-10 rounded-xl text-center flex flex-col justify-between items-center relative overflow-hidden">
                         <div class="absolute top-0 right-0 bg-dourado/80 text-carvao text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-bl-lg">Físico</div>
                         <div>
-                            <p class="text-dourado text-[11px] font-bold uppercase tracking-widest mt-4 mb-2">Livro Físico - Clube dos Autores<br><span class="text-marfim/60 font-normal">(Envio Nacional)</span></p>
+                            <p class="text-dourado text-[11px] font-bold uppercase tracking-widest mt-4 mb-2">Livro Físico - Clube de Autores<br><span class="text-marfim/60 font-normal">(Envio Nacional)</span></p>
                             <h3 class="font-cinzel text-2xl text-marfim font-bold mb-4">Versão Impressa Nacional</h3>
                             <p class="text-marfim/70 font-light text-sm mb-8">394 páginas em formato A5 (148 × 210 mm), impressas em papel Pólen, de tonalidade bege que proporciona uma leitura mais confortável, com acabamento em brochura com orelhas.</p>
                         </div>
-                        <a href="https://clubedeautores.com.br/livro/a-jornada-de-beregor-e-guilberin" target="_blank" rel="noopener" class="btn-primary w-full py-3 rounded font-bold uppercase tracking-widest text-xs block text-center mt-auto">Comprar no Clube dos Autores</a>
+                        <a href="https://clubedeautores.com.br/livro/a-jornada-de-beregor-e-guilberin" target="_blank" rel="noopener" class="btn-primary w-full py-3 rounded font-bold uppercase tracking-widest text-xs block text-center mt-auto">Comprar no Clube de Autores</a>
                     </div>
 
                     <!-- Fisico Amazon -->
@@ -417,126 +435,96 @@
             </div>
         </section>
 
-        <!-- 6. FAQ Literário -->
+        <!-- 6. FAQ -->
         <section id="faq" class="py-24 bg-carvao">
-            <div class="container mx-auto px-6 lg:px-12 max-w-4xl">
-                <div class="text-center mb-16">
-                    <h2 class="font-cinzel text-3xl md:text-5xl font-bold text-marfim mb-4">Perguntas Frequentes (FAQ)</h2>
-                    <p class="text-marfim/70 font-light text-lg">Tudo o que você precisa saber sobre a obra.</p>
+            <div class="container mx-auto px-6 lg:px-12 max-w-3xl">
+                <div class="text-center mb-12">
+                    <span class="block font-cinzel text-dourado text-xs font-bold tracking-[0.3em] uppercase mb-3">Dúvidas</span>
+                    <h2 class="font-titulo text-4xl md:text-6xl font-bold text-marfim">Perguntas frequentes</h2>
                 </div>
 
                 <div class="space-y-4">
-                    <!-- Item 1 -->
-                    <div x-data="{ open: false }" class="glass-card rounded-lg overflow-hidden">
-                        <button @click="open = !open" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                            <span class="font-cinzel font-bold text-marfim text-lg">1. Qual é a faixa etária recomendada para a leitura?</span>
-                            <span class="text-dourado" x-show="!open">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </span>
-                            <span class="text-dourado" x-show="open" x-cloak>
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
-                            </span>
-                        </button>
-                        <div x-show="open" x-collapse x-cloak class="px-6 pb-5 text-marfim/70 font-light leading-relaxed border-t border-white/5 pt-4">
-                            O livro é uma fantasia épica juvenil e adulta, recomendado a partir dos 12 ou 13 anos. É ideal para leitores que buscam batalhas épicas, mistérios antigos e lições profundas de heroísmo.
+                    <details class="faq-item glass-card rounded-lg overflow-hidden group" open>
+                        <summary class="flex justify-between items-center gap-4 px-6 py-5 cursor-pointer list-none">
+                            <span class="font-titulo font-bold text-marfim text-xl">Para que idade é o livro?</span>
+                            <svg class="w-5 h-5 shrink-0 text-dourado transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="px-6 pb-5 pt-4 border-t border-white/5 text-marfim/75 font-light leading-relaxed">
+                            A partir de 12 anos, e também para adultos que gostam de fantasia épica. Há batalhas e mortes, no tom de <em>O Hobbit</em> e <em>O Senhor dos Anéis</em>, mas as lutas não se demoram em detalhes sangrentos. Não há palavrões nem cenas de sexo, e o romance é delicado.
                         </div>
-                    </div>
-
-                    <!-- Item 2 -->
-                    <div x-data="{ open: false }" class="glass-card rounded-lg overflow-hidden">
-                        <button @click="open = !open" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                            <span class="font-cinzel font-bold text-marfim text-lg">2. O livro está disponível em quais formatos (físico e digital)?</span>
-                            <span class="text-dourado" x-show="!open">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </span>
-                            <span class="text-dourado" x-show="open" x-cloak>
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
-                            </span>
-                        </button>
-                        <div x-show="open" x-collapse x-cloak class="px-6 pb-5 text-marfim/70 font-light leading-relaxed border-t border-white/5 pt-4">
-                            Você pode adquirir A Jornada de Beregor e Guilberin no formato digital (eBook Kindle) ou na versão impressa: pelo Clube dos Autores (formato A5, papel Pólen, envio nacional) ou pela Amazon (formato 6 × 9 polegadas, envio internacional).
+                    </details>
+                    <details class="faq-item glass-card rounded-lg overflow-hidden group" open>
+                        <summary class="flex justify-between items-center gap-4 px-6 py-5 cursor-pointer list-none">
+                            <span class="font-titulo font-bold text-marfim text-xl">A história é mais de batalhas ou de aventura?</span>
+                            <svg class="w-5 h-5 shrink-0 text-dourado transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="px-6 pb-5 pt-4 border-t border-white/5 text-marfim/75 font-light leading-relaxed">
+                            Das duas coisas. A maior parte do livro é viagem e descoberta: florestas, reinos, povos e criaturas, amizades que se formam pelo caminho e momentos de humor. As batalhas crescem ao longo da jornada até o confronto final. A magia é discreta, como em <em>O Hobbit</em>: há magos, como Galdren e Rigar, mas a força da história está nos personagens.
                         </div>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div x-data="{ open: false }" class="glass-card rounded-lg overflow-hidden">
-                        <button @click="open = !open" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                            <span class="font-cinzel font-bold text-marfim text-lg">3. Onde posso comprar o livro?</span>
-                            <span class="text-dourado" x-show="!open">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </span>
-                            <span class="text-dourado" x-show="open" x-cloak>
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
-                            </span>
-                        </button>
-                        <div x-show="open" x-collapse x-cloak class="px-6 pb-5 text-marfim/70 font-light leading-relaxed border-t border-white/5 pt-4">
-                            O livro é vendido oficialmente pelo Clube dos Autores (versão impressa com envio para todo o Brasil) e pela Amazon (eBook Kindle e versão impressa com envio internacional), garantindo segurança na sua compra.
+                    </details>
+                    <details class="faq-item glass-card rounded-lg overflow-hidden group">
+                        <summary class="flex justify-between items-center gap-4 px-6 py-5 cursor-pointer list-none">
+                            <span class="font-titulo font-bold text-marfim text-xl">É volume único ou o começo de uma série?</span>
+                            <svg class="w-5 h-5 shrink-0 text-dourado transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="px-6 pb-5 pt-4 border-t border-white/5 text-marfim/75 font-light leading-relaxed">
+                            A história deste livro tem começo, meio e fim, sem deixar você preso a um final em aberto. Mas as Terras Livres guardam muito mais, e a continuação já está sendo escrita.
                         </div>
-                    </div>
-
-                    <!-- Item 4 -->
-                    <div x-data="{ open: false }" class="glass-card rounded-lg overflow-hidden">
-                        <button @click="open = !open" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                            <span class="font-cinzel font-bold text-marfim text-lg">4. O livro é volume único ou o início de uma série?</span>
-                            <span class="text-dourado" x-show="!open">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </span>
-                            <span class="text-dourado" x-show="open" x-cloak>
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
-                            </span>
-                        </button>
-                        <div x-show="open" x-collapse x-cloak class="px-6 pb-5 text-marfim/70 font-light leading-relaxed border-t border-white/5 pt-4">
-                            A obra entrega uma experiência completa e épica. Para descobrir se este é o fim ou o início de algo ainda maior nas Terras Livres, recomendamos iniciar a sua leitura!
+                    </details>
+                    <details class="faq-item glass-card rounded-lg overflow-hidden group">
+                        <summary class="flex justify-between items-center gap-4 px-6 py-5 cursor-pointer list-none">
+                            <span class="font-titulo font-bold text-marfim text-xl">O cão Guilberin morre?</span>
+                            <svg class="w-5 h-5 shrink-0 text-dourado transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="px-6 pb-5 pt-4 border-t border-white/5 text-marfim/75 font-light leading-relaxed">
+                            Sem contar a história: Guilberin está ao lado de Beregor até a última página.
                         </div>
-                    </div>
-
-                    <!-- Item 5 -->
-                    <div x-data="{ open: false }" class="glass-card rounded-lg overflow-hidden">
-                        <button @click="open = !open" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                            <span class="font-cinzel font-bold text-marfim text-lg">5. Como posso ler uma amostra grátis do livro antes de comprar?</span>
-                            <span class="text-dourado" x-show="!open">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </span>
-                            <span class="text-dourado" x-show="open" x-cloak>
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
-                            </span>
-                        </button>
-                        <div x-show="open" x-collapse x-cloak class="px-6 pb-5 text-marfim/70 font-light leading-relaxed border-t border-white/5 pt-4">
-                            Nós liberamos o início da história para você degustar. Basta clicar no botão "Ler Primeiro Capítulo Grátis" localizado no topo desta página e abrir o arquivo PDF.
+                    </details>
+                    <details class="faq-item glass-card rounded-lg overflow-hidden group">
+                        <summary class="flex justify-between items-center gap-4 px-6 py-5 cursor-pointer list-none">
+                            <span class="font-titulo font-bold text-marfim text-xl">O livro tem mapa?</span>
+                            <svg class="w-5 h-5 shrink-0 text-dourado transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="px-6 pb-5 pt-4 border-t border-white/5 text-marfim/75 font-light leading-relaxed">
+                            Tem. O Mapa das Terras Livres vem no livro, e você também pode <a href="mapa.html" class="text-dourado underline underline-offset-4 hover:text-marfim transition-colors">vê-lo aqui no site</a>. Nos apêndices, há ainda as <em>Breves histórias das origens de Hor</em>: como tudo começou, muito antes da jornada de Beregor.
                         </div>
-                    </div>
-                    
-                    <!-- Item 6 -->
-                    <div x-data="{ open: false }" class="glass-card rounded-lg overflow-hidden">
-                        <button @click="open = !open" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                            <span class="font-cinzel font-bold text-marfim text-lg">6. Existe versão em audiobook da obra?</span>
-                            <span class="text-dourado" x-show="!open">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </span>
-                            <span class="text-dourado" x-show="open" x-cloak>
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
-                            </span>
-                        </button>
-                        <div x-show="open" x-collapse x-cloak class="px-6 pb-5 text-marfim/70 font-light leading-relaxed border-t border-white/5 pt-4">
-                            Até o presente momento, o livro está disponível exclusivamente nos formatos de texto (físico impresso e eBook digital).
+                    </details>
+                    <details class="faq-item glass-card rounded-lg overflow-hidden group">
+                        <summary class="flex justify-between items-center gap-4 px-6 py-5 cursor-pointer list-none">
+                            <span class="font-titulo font-bold text-marfim text-xl">Qual edição devo comprar?</span>
+                            <svg class="w-5 h-5 shrink-0 text-dourado transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="px-6 pb-5 pt-4 border-t border-white/5 text-marfim/75 font-light leading-relaxed">
+                            No Brasil, a indicada é a edição impressa do Clube de Autores, feita aqui, em papel pólen. Para ler no celular, o eBook Kindle é a opção mais barata e chega na hora. A edição impressa da Amazon vem do exterior e é indicada para quem mora fora do Brasil. <a href="#onde-comprar" class="text-dourado underline underline-offset-4 hover:text-marfim transition-colors">Ver as edições e os preços</a>.
                         </div>
-                    </div>
-
-                    <!-- Item 7 -->
-                    <div x-data="{ open: false }" class="glass-card rounded-lg overflow-hidden">
-                        <button @click="open = !open" class="w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
-                            <span class="font-cinzel font-bold text-marfim text-lg">7. A história tem foco em batalhas ou é mais reflexiva?</span>
-                            <span class="text-dourado" x-show="!open">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </span>
-                            <span class="text-dourado" x-show="open" x-cloak>
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
-                            </span>
-                        </button>
-                        <div x-show="open" x-collapse x-cloak class="px-6 pb-5 text-marfim/70 font-light leading-relaxed border-t border-white/5 pt-4">
-                            O enredo traz o equilíbrio perfeito da alta fantasia. Você viverá o impacto das guerras, combates entre magos e manobras militares grandiosas, ao mesmo tempo em que acompanha a reflexão emocional e a evolução do pastor Beregor e de seu cão Guilberin.
+                    </details>
+                    <details class="faq-item glass-card rounded-lg overflow-hidden group">
+                        <summary class="flex justify-between items-center gap-4 px-6 py-5 cursor-pointer list-none">
+                            <span class="font-titulo font-bold text-marfim text-xl">Posso ler um trecho antes de comprar?</span>
+                            <svg class="w-5 h-5 shrink-0 text-dourado transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="px-6 pb-5 pt-4 border-t border-white/5 text-marfim/75 font-light leading-relaxed">
+                            Pode. O primeiro capítulo inteiro é gratuito: <a href="https://drive.google.com/file/d/1hXDsUf5eEYmQ8k8UcZ0idfASDMFobf9t/view?usp=sharing" target="_blank" rel="noopener" class="text-dourado underline underline-offset-4 hover:text-marfim transition-colors">ler o 1º capítulo</a>.
                         </div>
-                    </div>
+                    </details>
+                    <details class="faq-item glass-card rounded-lg overflow-hidden group">
+                        <summary class="flex justify-between items-center gap-4 px-6 py-5 cursor-pointer list-none">
+                            <span class="font-titulo font-bold text-marfim text-xl">Existe versão em inglês?</span>
+                            <svg class="w-5 h-5 shrink-0 text-dourado transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="px-6 pb-5 pt-4 border-t border-white/5 text-marfim/75 font-light leading-relaxed">
+                            Sim. <em>The Journey of Beregor and Guilberin</em> está à venda na Amazon americana, em eBook, capa comum e capa dura: <a href="https://www.amazon.com/s?k=The+Journey+of+Beregor+and+Guilberin" target="_blank" rel="noopener" class="text-dourado underline underline-offset-4 hover:text-marfim transition-colors">ver na Amazon</a>.
+                        </div>
+                    </details>
+                    <details class="faq-item glass-card rounded-lg overflow-hidden group">
+                        <summary class="flex justify-between items-center gap-4 px-6 py-5 cursor-pointer list-none">
+                            <span class="font-titulo font-bold text-marfim text-xl">Tem audiolivro?</span>
+                            <svg class="w-5 h-5 shrink-0 text-dourado transition-transform duration-300 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="px-6 pb-5 pt-4 border-t border-white/5 text-marfim/75 font-light leading-relaxed">
+                            Ainda não. Por enquanto, o livro existe impresso e em eBook.
+                        </div>
+                    </details>
                 </div>
             </div>
         </section>
