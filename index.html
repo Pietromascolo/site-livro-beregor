@@ -58,7 +58,7 @@
                         inter: ['Inter', 'sans-serif'],
                     },
                     backgroundImage: {
-                        'hero-pattern': "linear-gradient(to bottom, rgba(5, 5, 5, 0.5), rgba(5, 5, 5, 0.6) 60%, rgba(5, 5, 5, 1)), url('IMG/hero-bg.jpg?v=2')",
+                        'hero-pattern': "linear-gradient(to right, rgba(5, 5, 5, 0.92) 0%, rgba(5, 5, 5, 0.75) 32%, rgba(5, 5, 5, 0.15) 58%, rgba(5, 5, 5, 0) 75%), url('IMG/hero-bg.jpg?v=2')",
                         'section-pattern': "linear-gradient(to bottom, rgba(22, 35, 63, 0.8), rgba(5, 5, 5, 1)), url('IMG/bg-pattern.jpg')"
                     }
                 }
@@ -289,24 +289,29 @@
 
     <main>
         <!-- 1. Hero Section -->
-        <section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 bg-carvao bg-hero-pattern bg-cover bg-[position:70%_center] md:bg-center bg-no-repeat bg-fixed">
-            <div class="container mx-auto px-6 lg:px-12 relative z-10 text-center max-w-5xl">
-                <span class="block font-cinzel text-dourado text-[11px] md:text-sm font-bold tracking-[0.15em] md:tracking-[0.3em] uppercase mb-6 hero-sombra">Um pastor &middot; Seu cão fiel &middot; Uma guerra iminente</span>
-                <h1 class="font-titulo font-bold text-marfim text-5xl md:text-7xl lg:text-8xl leading-[1.05] mb-4 hero-sombra">
-                    A Jornada de Beregor e Guilberin
-                </h1>
-                <p class="font-titulo font-semibold text-gradient text-2xl md:text-4xl lg:text-5xl mb-8 hero-sombra-leve">Contra o Senhor das Sombras</p>
-                <p class="text-lg md:text-xl text-marfim/90 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
-                    Pelo destino das Terras Livres. Adentre um mundo de alta fantasia onde a coragem dos seres mais humildes é a nossa única esperança contra o avanço implacável das trevas.
-                </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                    <a href="#onde-comprar" class="btn-primary px-8 py-4 rounded font-bold uppercase tracking-widest text-sm w-full sm:w-auto text-center">Garantir Meu Exemplar</a>
-                    <a href="https://drive.google.com/file/d/1hXDsUf5eEYmQ8k8UcZ0idfASDMFobf9t/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-secondary px-8 py-4 rounded font-bold uppercase tracking-widest text-sm w-full sm:w-auto text-center">Ler Primeiro Capítulo Grátis</a>
+        <section id="hero" class="relative bg-carvao md:min-h-screen md:flex md:items-center md:pt-24 md:pb-16 md:bg-hero-pattern md:bg-cover md:bg-[position:center_72%] md:bg-no-repeat">
+            <!-- Celular: faixa com Beregor e Guilberin -->
+            <div class="relative md:hidden">
+                <img src="IMG/hero-mobile.jpg" alt="Beregor e o cão Guilberin olhando o vale de Saváris" width="900" height="664" class="block w-full h-[46vh] min-h-[260px] object-cover object-[50%_70%]">
+                <div class="absolute inset-0 bg-gradient-to-b from-carvao/60 via-transparent to-carvao"></div>
+            </div>
+
+            <div class="container mx-auto px-6 lg:px-12 relative z-10 -mt-6 md:mt-0 pb-12 md:pb-0">
+                <div class="max-w-xl">
+                    <span class="block font-cinzel text-dourado text-[10px] sm:text-xs font-bold tracking-[0.12em] sm:tracking-[0.25em] uppercase mb-4 hero-sombra">Um pastor &middot; Seu cão fiel &middot; <span class="whitespace-nowrap">Uma guerra iminente</span></span>
+                    <h1 class="font-titulo font-bold text-marfim text-[2.6rem] sm:text-5xl lg:text-7xl leading-[1.05] mb-2 hero-sombra">A Jornada de <br><span class="whitespace-nowrap">Beregor e Guilberin</span></h1>
+                    <p class="font-titulo font-semibold text-gradient text-2xl lg:text-4xl mb-6 hero-sombra-leve">Contra o Senhor das Sombras</p>
+                    <p class="text-base lg:text-lg text-marfim/90 mb-5 leading-relaxed hero-sombra">Uma fantasia épica brasileira no espírito de <em>O Hobbit</em> e <em>Nárnia</em>: reinos antigos, amizades postas à prova na estrada e a coragem de quem nunca pensou em ser herói.</p>
+                    <p class="flex items-center gap-2 text-xs text-marfim/75 mb-6"><span class="text-dourado tracking-widest" aria-hidden="true">★★★★★</span> Nota 5,0 dos leitores na Amazon</p>
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                        <a href="#onde-comprar" class="btn-primary px-7 py-4 rounded font-bold uppercase tracking-widest text-xs text-center">Comprar o livro</a>
+                        <a href="https://drive.google.com/file/d/1hXDsUf5eEYmQ8k8UcZ0idfASDMFobf9t/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-secondary px-7 py-4 rounded font-bold uppercase tracking-widest text-xs text-center">Ler o 1º capítulo grátis</a>
+                    </div>
+                    <p class="mt-5 text-xs text-marfim/60 tabular-nums">eBook Kindle R$&nbsp;16,80 &middot; Livro impresso no Brasil a partir de R$&nbsp;63,78</p>
                 </div>
-                <p class="mt-8 text-sm text-marfim/60 font-light tracking-wide">Disponível em eBook Kindle e livro impresso (Clube de Autores e Amazon).</p>
             </div>
             <!-- Decorative bottom fade -->
-            <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-carvao to-transparent"></div>
+            <div class="hidden md:block absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-carvao to-transparent"></div>
         </section>
 
         <!-- 2. A História / Sinopse -->
