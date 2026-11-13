@@ -279,15 +279,23 @@
         <!-- 2b. Onde tudo começa -->
         <section id="savaris" class="py-24 relative bg-gradient-to-b from-carvao to-azul_noturno">
             <div class="container mx-auto px-6 lg:px-12 max-w-6xl">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-                    <figure class="w-full max-w-sm md:max-w-md mx-auto">
-                        <img src="IMG/savaris.webp" alt="A casa de Beregor nos campos de Saváris, com a Lindalorëa dourada, as ovelhas, o moinho e o lago" width="1024" height="1536" loading="lazy" class="block w-full h-auto rounded-xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
+                <div class="grid grid-cols-1 md:grid-cols-2 md:grid-rows-[auto_1fr] gap-x-12 lg:gap-x-16 gap-y-8 items-start">
+                    <!-- Título (no celular aparece antes da imagem) -->
+                    <div class="text-center md:text-left md:col-start-2 md:row-start-1 md:self-end">
+                        <span class="block font-cinzel text-dourado text-xs md:text-sm font-bold tracking-[0.3em] uppercase mb-4">Onde tudo começa</span>
+                        <h2 class="font-titulo text-4xl md:text-6xl font-bold text-marfim leading-[1.05]">Os campos de <br class="hidden lg:block">Saváris</h2>
+                    </div>
+
+                    <!-- Imagem -->
+                    <figure class="md:col-start-1 md:row-start-1 md:row-span-2 md:self-center w-full max-w-sm md:max-w-md mx-auto">
+                        <button type="button" data-abrir="dlg-savaris" class="block w-full rounded-xl overflow-hidden border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)] cursor-zoom-in" aria-label="Ampliar a ilustração dos campos de Saváris">
+                            <img src="IMG/savaris.webp" alt="A casa de Beregor nos campos de Saváris: casa de pedra clara com telhado de palha, a árvore Lindalorëa de folhas douradas, ovelhas no pasto, o lago e o moinho no vale" width="1024" height="1536" loading="lazy" class="block w-full h-auto transition-transform duration-500 hover:scale-[1.02]">
+                        </button>
                         <figcaption class="text-center text-marfim/50 text-sm font-light mt-4">A casa de Beregor, nos campos de Saváris</figcaption>
                     </figure>
 
-                    <div>
-                        <span class="block font-cinzel text-dourado text-xs md:text-sm font-bold tracking-[0.3em] uppercase mb-4">Onde tudo começa</span>
-                        <h2 class="font-titulo text-4xl md:text-6xl font-bold text-marfim leading-[1.05] mb-8">Os campos de <br class="hidden lg:block">Saváris</h2>
+                    <!-- Texto -->
+                    <div class="md:col-start-2 md:row-start-2">
                         <div class="space-y-5 text-marfim/85 text-base md:text-lg leading-relaxed">
                             <p>Beregor não mora dentro das muralhas de Valandor, mas nos campos, a pouca distância delas. A casa é de pedra clara e telhado de palha, com flores do campo nas janelas, e diante dela ergue-se a Lindalorëa, a árvore sagrada de folhas douradas, sob a qual ele sonha desde menino.</p>
                             <p>No curral, Guilberin guarda as ovelhas. No fundo do vale ficam o lago, o moinho que gira no fio do riacho e a grande árvore de onde os meninos da vila se lançam na água.</p>
@@ -298,6 +306,14 @@
                         </blockquote>
                     </div>
                 </div>
+
+                <!-- Janela: ilustração ampliada -->
+                <dialog id="dlg-savaris" class="dlg-imagem bg-transparent p-0 max-w-[92vw] max-h-[92vh] backdrop:bg-black/85">
+                    <form method="dialog" class="relative">
+                        <button class="absolute top-3 right-3 w-10 h-10 rounded-full bg-carvao/80 text-marfim border border-dourado/50 text-xl leading-none hover:bg-dourado hover:text-carvao transition-colors" aria-label="Fechar">&times;</button>
+                        <img data-src="IMG/savaris-grande.webp" alt="Os campos de Saváris, com a casa de Beregor e a Lindalorëa" width="1024" height="1536" class="block max-w-[92vw] max-h-[88vh] w-auto h-auto rounded-lg">
+                    </form>
+                </dialog>
             </div>
         </section>
 
