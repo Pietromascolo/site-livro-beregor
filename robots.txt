@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://jornadaberegor.com/sitemap.xml
+Sitemap: https://jornadadeberegor.com/sitemap.xml

@@ -7,20 +7,20 @@
     <meta name="description" content="Um pastor, seu cão fiel e uma guerra pelo destino das Terras Livres contra o Senhor das Sombras. Descubra esta grandiosa fantasia épica nacional.">
     <meta name="keywords" content="A Jornada de Beregor e Guilberin, livro de fantasia épica nacional, alta fantasia brasileira, livro de fantasia medieval com magos e reinos, livro para quem gosta de Tolkien, Contra o Senhor das Sombras livro, fantasia épica juvenil, Nilson Mascolo Filho autor">
     <meta name="author" content="Nilson Mascolo Filho">
-    <link rel="canonical" href="https://jornadaberegor.com/">
+    <link rel="canonical" href="https://jornadadeberegor.com/">
     
     <!-- Open Graph -->
     <meta property="og:title" content="A Jornada de Beregor e Guilberin | Fantasia Épica">
     <meta property="og:description" content="Um pastor, seu cão fiel e uma guerra pelo destino das Terras Livres contra o Senhor das Sombras. Descubra esta grandiosa fantasia épica nacional.">
-    <meta property="og:image" content="https://jornadaberegor.com/IMG/capa_livro.jpg?v=3">
-    <meta property="og:url" content="https://jornadaberegor.com/">
+    <meta property="og:image" content="https://jornadadeberegor.com/IMG/capa_livro.jpg?v=3">
+    <meta property="og:url" content="https://jornadadeberegor.com/">
     <meta property="og:type" content="website">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="A Jornada de Beregor e Guilberin | Fantasia Épica">
     <meta name="twitter:description" content="Um pastor, seu cão fiel e uma guerra pelo destino das Terras Livres contra o Senhor das Sombras. Descubra esta grandiosa fantasia épica nacional.">
-    <meta name="twitter:image" content="https://jornadaberegor.com/IMG/capa_livro.jpg?v=3">
+    <meta name="twitter:image" content="https://jornadadeberegor.com/IMG/capa_livro.jpg?v=3">
     
     <link rel="icon" href="favicon.ico" sizes="48x48">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -29,6 +29,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <meta name="theme-color" content="#050505">
     
+    <!-- Meta Pixel: cole aqui o código-base do Gerenciador de Eventos da Meta -->
+    <!-- Google Analytics (opcional): cole aqui o código do gtag.js -->
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +41,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Alpine.js -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 
     <!-- Tailwind Config -->
     <script>
@@ -58,8 +61,8 @@
                         inter: ['Inter', 'sans-serif'],
                     },
                     backgroundImage: {
-                        'hero-pattern': "linear-gradient(to right, rgba(5, 5, 5, 0.92) 0%, rgba(5, 5, 5, 0.75) 32%, rgba(5, 5, 5, 0.15) 58%, rgba(5, 5, 5, 0) 75%), url('IMG/hero-bg.jpg?v=2')",
-                        'section-pattern': "linear-gradient(to bottom, rgba(22, 35, 63, 0.8), rgba(5, 5, 5, 1)), url('IMG/bg-pattern.jpg')"
+                        'hero-pattern': "linear-gradient(to right, rgba(5, 5, 5, 0.92) 0%, rgba(5, 5, 5, 0.75) 32%, rgba(5, 5, 5, 0.15) 58%, rgba(5, 5, 5, 0) 75%), url('IMG/hero-bg.webp')",
+                        'section-pattern': "linear-gradient(to bottom, rgba(22, 35, 63, 0.8), rgba(5, 5, 5, 1)), url('IMG/bg-pattern.webp')"
                     }
                 }
             }
@@ -133,35 +136,31 @@
       "@graph": [
         {
           "@type": "Person",
-          "@id": "https://jornadaberegor.com/#author",
+          "@id": "https://jornadadeberegor.com/#author",
           "name": "Nilson Mascolo Filho",
           "description": "Músico, escritor e artesão ítalo-brasileiro, autor de A Jornada de Beregor e Guilberin.",
-          "image": "https://jornadaberegor.com/IMG/autor.jpg"
+          "image": "https://jornadadeberegor.com/IMG/autor.jpg"
         },
         {
           "@type": "Book",
-          "@id": "https://jornadaberegor.com/#book",
+          "@id": "https://jornadadeberegor.com/#book",
           "name": "A Jornada de Beregor e Guilberin",
           "author": {
-            "@id": "https://jornadaberegor.com/#author"
+            "@id": "https://jornadadeberegor.com/#author"
           },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Atlasnov"
-          },
-          "image": "https://jornadaberegor.com/IMG/capa_livro.jpg?v=3",
-          "url": "https://jornadaberegor.com/",
+          "image": "https://jornadadeberegor.com/IMG/capa_livro.jpg?v=3",
+          "url": "https://jornadadeberegor.com/",
           "inLanguage": "pt-BR"
         },
         {
           "@type": "WebSite",
-          "@id": "https://jornadaberegor.com/#website",
-          "url": "https://jornadaberegor.com/",
+          "@id": "https://jornadadeberegor.com/#website",
+          "url": "https://jornadadeberegor.com/",
           "name": "A Jornada de Beregor e Guilberin - Livro de Fantasia Épica"
         },
         {
           "@type": "FAQPage",
-          "@id": "https://jornadaberegor.com/#faq",
+          "@id": "https://jornadadeberegor.com/#faq",
           "mainEntity": [
             {"@type": "Question", "name": "Quem é Beregor?", "acceptedAnswer": {"@type": "Answer", "text": "Um jovem pastor de dezoito anos que nunca saiu de sua terra. Mora com os pais numa casa de pedra clara, fora das muralhas de Valandor, e o livro o apresenta assim: \"nem tão belo, nem tão feio; nem tão esperto, nem tão forte\". Conhece o peso de um cordeiro recém-nascido, o cheiro da chuva antes de cair e o caminho de casa no escuro. Carrega a espada curta que foi do pai e que nunca precisou usar, e uma flauta de sabugueiro em que toca, de ouvido, a canção que o pai cantava no curral. Alguns o acham meio esquisito, porque vive conversando com o cão. Mas havia nele alguma coisa diferente, que ninguém saberia dizer o que era."}},
             {"@type": "Question", "name": "Quem é Guilberin?", "acceptedAnswer": {"@type": "Answer", "text": "Um cão pastor de pelo marrom-avelã, com branco no focinho, nas patas, no peito e na ponta da cauda, e uma faixa branca em volta do pescoço, como um colar. Tem olhos cor de âmbar, conhece cada trilha de Saváris e cada cheiro de cada estação, e nenhuma ovelha se perde sob sua guarda. Tem fraqueza por madeira: os brinquedos que o pai de Beregor entalhou estão quase todos marcados pelos dentes dele. Nasceu no mesmo dia do ano que o dono, o dia mais longo de todos. Muita gente o acha mais interessante do que Beregor, e talvez tenha razão."}},
@@ -226,7 +225,7 @@
         <section id="hero" class="relative bg-carvao md:min-h-screen md:flex md:items-center md:pt-24 md:pb-16 md:bg-hero-pattern md:bg-cover md:bg-[position:center_72%] md:bg-no-repeat">
             <!-- Celular: faixa com Beregor e Guilberin -->
             <div class="relative md:hidden">
-                <img src="IMG/hero-mobile.jpg" alt="Beregor e o cão Guilberin olhando o vale de Saváris" width="900" height="664" class="block w-full h-[46vh] min-h-[260px] object-cover object-[50%_70%]">
+                <img src="IMG/hero-mobile.webp" alt="Beregor e o cão Guilberin olhando o vale de Saváris" width="900" height="664" class="block w-full h-[46vh] min-h-[260px] object-cover object-[50%_70%]">
                 <div class="absolute inset-0 bg-gradient-to-b from-carvao/60 via-transparent to-carvao"></div>
             </div>
 
@@ -259,7 +258,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
                     <div class="relative w-full max-w-[240px] sm:max-w-xs md:max-w-md mx-auto">
                         <div class="absolute inset-0 bg-dourado/20 rounded-lg transform translate-x-4 translate-y-4"></div>
-                        <img src="./IMG/capa_livro.jpg?v=3" alt="Capa do Livro A Jornada de Beregor e Guilberin" width="900" height="1379" loading="lazy" class="relative block h-auto w-full rounded-lg shadow-lg">
+                        <img src="IMG/capa_livro.webp" alt="Capa do Livro A Jornada de Beregor e Guilberin" width="900" height="1379" loading="lazy" class="relative block h-auto w-full rounded-lg shadow-lg">
                     </div>
                     <div class="space-y-5 text-marfim/85 text-base md:text-lg leading-relaxed">
                         <p class="flex items-center gap-2 text-sm text-marfim/70"><span class="text-dourado tracking-widest" aria-hidden="true">★★★★★</span> 5,0 na Amazon</p>
@@ -282,7 +281,7 @@
             <div class="container mx-auto px-6 lg:px-12 max-w-6xl">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
                     <figure class="w-full max-w-sm md:max-w-md mx-auto">
-                        <img src="IMG/savaris.jpg" alt="A casa de Beregor nos campos de Saváris, com a Lindalorëa dourada, as ovelhas, o moinho e o lago" width="1024" height="1536" loading="lazy" class="block w-full h-auto rounded-xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
+                        <img src="IMG/savaris.webp" alt="A casa de Beregor nos campos de Saváris, com a Lindalorëa dourada, as ovelhas, o moinho e o lago" width="1024" height="1536" loading="lazy" class="block w-full h-auto rounded-xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
                         <figcaption class="text-center text-marfim/50 text-sm font-light mt-4">A casa de Beregor, nos campos de Saváris</figcaption>
                     </figure>
 
@@ -315,7 +314,7 @@
                     <!-- Mapa -->
                     <figure>
                         <a href="mapa.html" class="block rounded-lg overflow-hidden border border-dourado/40 shadow-[0_10px_40px_rgba(0,0,0,0.6)] hover:shadow-[0_0_40px_rgba(201,162,39,0.25)] transition-shadow duration-300" aria-label="Ver o Mapa das Terras Livres">
-                            <img src="IMG/bg-pattern.jpg" alt="Mapa das Terras Livres" width="1280" height="905" loading="lazy" class="block w-full h-auto transition-transform duration-500 hover:scale-[1.03]">
+                            <img src="IMG/bg-pattern.webp" alt="Mapa das Terras Livres" width="1280" height="905" loading="lazy" class="block w-full h-auto transition-transform duration-500 hover:scale-[1.03]">
                         </a>
                         <figcaption class="text-center text-marfim/50 text-xs font-light mt-3">Arte do mapa: @eusou_george</figcaption>
                     </figure>
@@ -484,7 +483,7 @@
                 <div class="flex flex-col md:flex-row gap-16 items-center">
                     <div class="w-full md:w-2/5">
                         <div class="relative w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full overflow-hidden border-4 border-dourado/30 shadow-2xl">
-                            <img src="./IMG/autor.jpg" alt="Nilson Mascolo Filho - Autor" class="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-[#C9A227]/50 shadow-[0_0_30px_rgba(201,162,39,0.15)] object-cover mx-auto">
+                            <img src="IMG/autor.webp" alt="Nilson Mascolo Filho - Autor" class="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-[#C9A227]/50 shadow-[0_0_30px_rgba(201,162,39,0.15)] object-cover mx-auto">
                         </div>
                     </div>
                     <div class="w-full md:w-3/5 space-y-6">
@@ -696,5 +695,53 @@
         </div>
     </footer>
 
+
+    <!-- Barra fixa de compra (celular) -->
+    <div id="barra-compra" class="md:hidden fixed bottom-0 inset-x-0 z-40 translate-y-full transition-transform duration-300 bg-[#0b1020]/95 backdrop-blur border-t border-dourado/30 px-4 py-3 flex items-center justify-between gap-3" aria-hidden="true">
+        <div class="leading-tight">
+            <span class="block text-marfim text-sm font-semibold">A partir de R$&nbsp;16,80</span>
+            <span class="block text-marfim/60 text-xs">eBook Kindle ou livro impresso</span>
+        </div>
+        <a href="#onde-comprar" tabindex="-1" class="btn-primary shrink-0 px-5 py-3 rounded font-bold uppercase tracking-widest text-xs">Comprar</a>
+    </div>
+
+    <script>
+    // Mostra a barra depois do topo e esconde em "Onde comprar" e no rodapé
+    (function () {
+        var barra = document.getElementById('barra-compra');
+        var hero = document.getElementById('hero');
+        var compra = document.getElementById('onde-comprar');
+        var rodape = document.querySelector('body > footer');
+        if (!barra || !hero) return;
+        var link = barra.querySelector('a');
+        function atualizar() {
+            var alto = window.innerHeight;
+            var heroPassou = hero.getBoundingClientRect().bottom < 0;
+            var c = compra ? compra.getBoundingClientRect() : null;
+            var naCompra = c ? (c.top < alto && c.bottom > 0) : false;
+            var noRodape = rodape ? rodape.getBoundingClientRect().top < alto : false;
+            var mostrar = heroPassou && !naCompra && !noRodape;
+            barra.classList.toggle('translate-y-full', !mostrar);
+            barra.setAttribute('aria-hidden', mostrar ? 'false' : 'true');
+            link.tabIndex = mostrar ? 0 : -1;
+        }
+        window.addEventListener('scroll', atualizar, { passive: true });
+        window.addEventListener('resize', atualizar);
+        atualizar();
+    })();
+
+    // Conversões: clique nas lojas = InitiateCheckout; capítulo grátis = Lead
+    document.addEventListener('click', function (e) {
+        var link = e.target.closest('a');
+        if (!link) return;
+        var url = link.href, nome = link.textContent.trim();
+        var evento = null;
+        if (/a\.co\/|amazon\.|clubedeautores|play\.google/.test(url)) evento = 'InitiateCheckout';
+        else if (/drive\.google|primeiro-capitulo/.test(url)) evento = 'Lead';
+        if (!evento) return;
+        if (typeof fbq === 'function') fbq('track', evento, { content_name: nome });
+        if (typeof gtag === 'function') gtag('event', evento === 'Lead' ? 'generate_lead' : 'begin_checkout', { item_name: nome, link_url: url });
+    });
+    </script>
 </body>
 </html>
